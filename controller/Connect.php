@@ -5,7 +5,7 @@ ini_set('soap.wsdl_cache_enabled', 0 );
 ini_set('soap.wsdl_cache_ttl', 0);
 
 class Connect {
-    private  $options = null;
+    protected  $options = null;
     private $arrContextOptions= null;
     private $client= null;
     private $sauce = null;
@@ -41,7 +41,7 @@ class Connect {
             trigger_error('Ошибка подключения или внутренняя ошибка сервера. Не удалось связаться с базой 1С.', E_USER_ERROR);
             var_dump($e);
         }
-        //echo 'Раз';
+
         if (is_soap_fault($this->client)){
             trigger_error('Ошибка подключения или внутренняя ошибка сервера. Не удалось связаться с базой 1С.', E_ERROR);
             return false;
