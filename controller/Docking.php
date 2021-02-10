@@ -4,13 +4,16 @@
 ini_set('soap.wsdl_cache_enabled', 0 );
 ini_set('soap.wsdl_cache_ttl', 0);
 
-class Connect {
-    protected  $options = null;
-    private $arrContextOptions= null;
-    private $client= null;
-    private $sauce = null;
+class Docking {
+    protected  $options = array();
+    private $arrContextOptions;
+    private $client;
+    protected $sauce;
 
-    private function getWSDL($url){
+
+
+    private function getWSDL($url): string
+    {
         $wsdl = $url. '?wsdl';
         $this->sauce = $url;
         $this->arrContextOptions=array(
@@ -28,11 +31,11 @@ class Connect {
 
     private function getOptions(): array
     {
-        $this->options =array('location'=>$this->sauce,'login' => 'Администратор', 'password' => null);
+        $this->options =array('location'=>$this->sauce,'login' => 'Администратор', 'password' => "11016");
         return $this->options;
     }
 
-    public function connect1C($url): bool|SoapClient
+    public function connect1C($url): ?SoapClient
     {
 
         try {
@@ -44,7 +47,7 @@ class Connect {
 
         if (is_soap_fault($this->client)){
             trigger_error('Ошибка подключения или внутренняя ошибка сервера. Не удалось связаться с базой 1С.', E_ERROR);
-            return false;
+            return null;
         }
         return $this->client;
     }
