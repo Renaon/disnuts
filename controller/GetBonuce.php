@@ -13,5 +13,6 @@
                 'ДатаЗапроса' => date('Y-m-d H:i:s')
             );
             $result = $client->ПолучитьОстатокБонусов($params);
+            echo $result;
         }
     }
