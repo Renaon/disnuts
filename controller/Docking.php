@@ -4,9 +4,9 @@
 ini_set('soap.wsdl_cache_enabled', 0 );
 ini_set('soap.wsdl_cache_ttl', 0);
 
-class Docking {
+class Docking{
     protected  $options = array();
-    private $arrContextOptions;
+//    private $arrContextOptions;
     private $client;
     protected $sauce;
 
@@ -16,22 +16,22 @@ class Docking {
     {
         $wsdl = $url. '?wsdl';
         $this->sauce = $url;
-        $this->arrContextOptions=array(
-            'ssl'=>array(
-                'verify_peer'=>false,
-                'verify_peer_name'=>false,
-                'allow_self_signed' => true
-            ),
-            'https' => array(
-                'curl_verify_ssl_peer'  => false,
-                'curl_verify_ssl_host'  => false)
-        );
+//        $this->arrContextOptions=array(
+//            'ssl'=>array(
+//                'verify_peer'=>false,
+//                'verify_peer_name'=>false,
+//                'allow_self_signed' => true
+//            ),
+//            'https' => array(
+//                'curl_verify_ssl_peer'  => false,
+//                'curl_verify_ssl_host'  => false)
+//        );
         return $wsdl;
     }
 
     private function getOptions(): array
     {
-        $this->options =array('location'=>$this->sauce,'login' => 'Администратор', 'password' => "11016");
+        $this->options =array('location'=>$this->sauce,'login' => 'admin', 'password' => "11016");
         return $this->options;
     }
 
