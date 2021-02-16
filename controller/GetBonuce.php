@@ -1,6 +1,6 @@
 <?php
 
-    class GetBonuce extends Docking
+    class GetBonuce
     {
         private $result;
         public function __construct($client)
@@ -10,7 +10,7 @@
                 'ДатаЗапроса' => date('Y-m-d H:i:s')
             );
             $result = $client->ПолучитьОстатокБонусов($params);
-            var_dump($result);
+//            var_dump($result);
             $this->result = $result;
         }
 
