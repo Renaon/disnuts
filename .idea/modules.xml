@@ -3,6 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/disnuts.iml" filepath="$PROJECT_DIR$/.idea/disnuts.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../sweet_bitrix/.idea/sweet_bitrix.iml" filepath="$PROJECT_DIR$/../sweet_bitrix/.idea/sweet_bitrix.iml" />
     </modules>
   </component>
 </project>

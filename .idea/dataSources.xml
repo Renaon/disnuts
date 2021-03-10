@@ -8,5 +8,15 @@
       <jdbc-url>jdbc:mysql://localhost:3306</jdbc-url>
       <working-dir>$ProjectFileDir$</working-dir>
     </data-source>
+    <data-source source="LOCAL" name="sitemanager@192.168.12.128" uuid="9435f1ba-a44c-4e8e-aad7-4e67454c680e">
+      <driver-ref>mysql.8</driver-ref>
+      <synchronize>true</synchronize>
+      <jdbc-driver>com.mysql.cj.jdbc.Driver</jdbc-driver>
+      <jdbc-url>jdbc:mysql://192.168.12.128:3306/sitemanager</jdbc-url>
+      <working-dir>$ProjectFileDir$</working-dir>
+      <driver-properties>
+        <property name="serverTimezone" value="Europe/Moscow" />
+      </driver-properties>
+    </data-source>
   </component>
 </project>
