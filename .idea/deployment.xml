@@ -12,7 +12,7 @@
       <paths name="clothes">
         <serverdata>
           <mappings>
-            <mapping deploy="/home/bitrix/www/bitrix/local/modules/" local="$PROJECT_DIR$/../sweet_bitrix" web="/" />
+            <mapping deploy="/disnuts" local="$PROJECT_DIR$" web="/" />
           </mappings>
         </serverdata>
       </paths>
